@@ -1055,6 +1055,7 @@ mod test {
             authorization: Default::default(),
             executable_document: None,
             id: SubgraphRequestId(String::new()),
+            is_deferred_fetch: false,
         };
 
         service.ready().await?.call(req).await?;
@@ -1484,6 +1485,7 @@ mod test {
             authorization: Default::default(),
             executable_document: None,
             id: SubgraphRequestId(String::new()),
+            is_deferred_fetch: false,
         };
         service.modify_subgraph_request(&mut request);
         let headers = request
@@ -1556,6 +1558,7 @@ mod test {
             authorization: Default::default(),
             executable_document: None,
             id: SubgraphRequestId(String::new()),
+            is_deferred_fetch: false,
         };
         service.modify_subgraph_request(&mut request);
         let headers = request
@@ -1638,6 +1641,7 @@ mod test {
             authorization: Default::default(),
             executable_document: None,
             id: SubgraphRequestId(String::new()),
+            is_deferred_fetch: false,
         }
     }
 
